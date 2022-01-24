@@ -21,15 +21,6 @@ title: "ISO 仓库"
 诚挚感谢以下高校、开源社区和公司为深度操作系统提供镜像服务!
 
 <table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td><img alt="logo" src="https://www.deepin.org/wp-content/uploads/flag/1473231703China.jpg"> 中国</td>
