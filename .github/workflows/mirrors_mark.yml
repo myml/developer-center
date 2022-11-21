@@ -1,0 +1,32 @@
+
+name: mirror check
+on:
+  push:
+    paths:
+      - mirrors/**.md
+      - .github/workflows/mirrors_mark.yml
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: "^1.16.1"
+      - name: install
+        run: go install github.com/myml/mirrors@v0.0.9
+      - name: package_zh
+        run: mirrors -source https://community-packages.deepin.com/deepin/ -packages_path mirrors/packages_zh.md -check_file /dists/apricot/InRelease > mirrors/packages_zh_mark.css
+      - name: package_en
+        run: mirrors -source https://community-packages.deepin.com/deepin/ -packages_path mirrors/packages_en.md -check_file /dists/apricot/InRelease > mirrors/packages_en_mark.css
+      - name: release_zh
+        run: mirrors -source https://cdimage.deepin.com/releases/ -releases_path mirrors/releases_zh.md -check_file /20.7/deepin-desktop-community-20.7-amd64.iso > mirrors/releases_zh_mark.css
+      - name: release_en
+        run: mirrors -source https://cdimage.deepin.com/releases/ -releases_path mirrors/releases_en.md -check_file /20.7/deepin-desktop-community-20.7-amd64.iso > mirrors/releases_en_mark.css
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "auto: Mirrors mark"
+          commit_user_name: myml
+          commit_user_email: wurongjie1@gmail.com
