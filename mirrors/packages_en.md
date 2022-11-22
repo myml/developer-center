@@ -4,6 +4,8 @@ title: "Packages Repository"
 
 <link rel="stylesheet" href="packages_en_mark.css" />
 
+<link rel="stylesheet" href="/api/v1/public/docs/developer-center/mirrors/packages_en_mark.css" />
+
 - [Packages Repository](packages_en.md)
 
 - [ISO Repository](releases_en.md)

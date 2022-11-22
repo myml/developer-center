@@ -4,6 +4,8 @@ title: "ISO Repository"
 
 <link rel="stylesheet" href="releases_en_mark.css" />
 
+<link rel="stylesheet" href="/api/v1/public/docs/developer-center/mirrors/releases_en_mark.css" />
+
 - [Packages Repository](packages_en.md)
 
 - [ISO Repository](releases_en.md)
@@ -729,7 +731,7 @@ Sincerely thank the following universities, open-source communities and companie
   </tbody>
 </table>
 
-## How to provide a mirror:
+## How to provide a mirror
 
 | Synchronization command                                                  | Space needed |
 | ------------------------------------------------------------------------ | ------------ |

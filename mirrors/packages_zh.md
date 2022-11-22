@@ -4,6 +4,8 @@ title: "软件仓库"
 
 <link rel="stylesheet" href="packages_zh_mark.css" />
 
+<link rel="stylesheet" href="/api/v1/public/docs/developer-center/mirrors/packages_zh_mark.css" />
+
 - [软件仓库](packages_zh.md)
 
 - [ISO 仓库](releases_zh.md)
@@ -841,7 +843,7 @@ title: "软件仓库"
   </tbody>
 </table>
 
-# 如何提供一个镜像源：
+# 如何提供一个镜像源
 
 | 同步命令                                                                 | 所需大小 |
 | ------------------------------------------------------------------------ | -------- |
